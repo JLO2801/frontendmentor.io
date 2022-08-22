@@ -1,2 +1,8 @@
 # frontendmentor.io
-My frontendmentor solutions
+
+This is a repository collection of all solutions which I've made on frontendmentor.io
+Each folder contains a solution. 
+
+## Solutions
+
+- Will follow here
