@@ -23,8 +23,8 @@ This solution is to test the system of Frontendmentor.io
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontendmentor.io](https://www.frontendmentor.io/solutions/qr-code-component-0sd1b0IJhl)
+- Live Site URL: [Github Pages](https://jlo2801.github.io/frontendmentor.io/QrCodeComponent/)
 
 ## My process
 
