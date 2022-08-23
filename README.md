@@ -10,4 +10,4 @@ Each folder contains a solution.
 ## Author
 
 - Website - [Jonas Bell](https://www.jonasbell.de)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/JLO2801)
+- Frontend Mentor - [@JLO2801](https://www.frontendmentor.io/profile/JLO2801)
