@@ -6,6 +6,7 @@ Each folder contains a solution.
 ## Solutions
 
 - [QR code component](https://jlo2801.github.io/frontendmentor.io/QrCodeComponent)
+- [Product preview card component](https://jlo2801.github.io/frontendmentor.io/ProductPreviewCardComponent)
 
 ## Author
 
