@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <style>
+      /* base - hoEl */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --white: #fff;
+        --dark-grayish-blue: hsl(228, 12%, 48%);
+        --dark-cyan: hsl(158, 36%, 37%);
+      }
+
+      html {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      body {
+        background-color: hsl(30, 38%, 92%);
+      }
+
+      /* font-import */
+      /* montserrat-500 - latin */
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        src: local(""),
+          url("./fonts/Montserrat/montserrat-v25-latin-500.woff2")
+            format("woff2"),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("./fonts/Montserrat/montserrat-v25-latin-500.woff")
+            format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+      /* montserrat-700 - latin */
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        src: local(""),
+          url("./fonts/Montserrat/montserrat-v25-latin-700.woff2")
+            format("woff2"),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("./fonts/Montserrat/montserrat-v25-latin-700.woff")
+            format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+      /* fraunces-700 - latin */
+      @font-face {
+        font-family: "Fraunces";
+        font-style: normal;
+        font-weight: 700;
+        src: local(""),
+          url("./fonts/Fraunces/fraunces-v23-latin-700.woff2") format("woff2"),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("./fonts/Fraunces/fraunces-v23-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+
+      /* specific stylings */
+      main {
+        min-height: 100vh;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: 37.5rem;
+        height: 28.125rem;
+        display: flex;
+        background-color: var(--white);
+        border-radius: 0.8rem;
+        overflow: /*  */ hidden;
+      }
+
+      /* Card left-side styling */
+      .card__left {
+        flex-basis: 50%;
+        overflow: hidden;
+      }
+
+      picture img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Card right-side styling */
+      .card__right {
+        flex-basis: 50%;
+        padding: 2rem;
+      }
+
+      span {
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: var(--dark-grayish-blue);
+        letter-spacing: 0.3rem;
+      }
+
+      h1 {
+        font-family: "Fraunces", serif;
+        color: hsl(212, 21%, 14%);
+        font-size: 2rem;
+        line-height: 2rem;
+        display: inline-block;
+        padding: 1.25rem 0 1.5rem;
+      }
+
+      p {
+        color: var(--dark-grayish-blue);
+        font-size: 0.875rem;
+        line-height: 1.45rem;
+      }
+
+      /* Price stylings */
+      .card__prices {
+        padding: 1.5rem 0 1.75rem;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .card__actual-price {
+        padding-right: 1.25rem;
+
+        font-family: "Fraunces", serif;
+        font-size: 2rem;
+        color: var(--dark-cyan);
+      }
+
+      .card__old-price {
+        color: var(--dark-grayish-blue);
+        text-decoration: line-through;
+        font-size: 0.875rem;
+      }
+
+      /* Button stylings */
+      .card__button {
+        background-color: var(--dark-cyan);
+        padding: 0.9375rem;
+        border-radius: 0.5rem;
+        margin-top: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .card__button:hover {
+        background-color: var(--dark-grayish-blue);
+      }
+
+      .card__button-label {
+        color: var(--white);
+        padding-left: 0.75rem;
+        font-size: 0.875rem;
+      }
+
+      /* Mobile Design from 768px */
+      @media (max-width: 48em) {
+        .card {
+          width: 21.25rem;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          height: unset;
+        }
+
+        .card__left {
+          flex-basis: 100%;
+          max-height: 15rem;
+        }
+
+        .card__right {
+          flex-basis: 100%;
+          padding: 1.25rem 1.4rem 1.5rem;
+        }
+
+        h1 {
+          font-size: 1.95rem;
+          padding: 0.7rem 0 0.9rem;
+        }
+
+        .card__prices {
+          padding: 1.175rem 0 1.1rem;
+        }
+
+        .card__actual-price {
+          font-size: 1.9rem;
+        }
+
+        .card__old-price {
+          font-size: 0.825rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="card">
+        <div class="card__left">
+          <picture>
+            <source
+              srcset="./images/image-product-desktop.jpg"
+              media="(min-width: 48.001em)"
+            />
+            <img
+              src="./images/image-product-mobile.jpg"
+              alt="Image of Gabrielle Essence Eau De Parfum de Chanel"
+            />
+          </picture>
+        </div>
+        <div class="card__right">
+          <span>Perfume</span>
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="card__prices">
+            <div class="card__actual-price">$149.99</div>
+            <div class="card__old-price">$169.99</div>
+          </div>
+          <div class="card__button">
+            <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+                fill="#FFF"
+              />
+            </svg>
+            <div class="card__button-label">Add to Cart</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
